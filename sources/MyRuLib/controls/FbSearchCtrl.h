@@ -108,6 +108,13 @@ public:
     // creation
     // --------
 
+    // implement this to return the associated GtkEntry or another widget
+    // implementing GtkEditable
+    virtual GtkEditable *GetEditable() const;
+
+    // implement this to return the associated GtkEntry
+    virtual GtkEntry *GetEntry() const;
+
     FbSearchCtrl();
     FbSearchCtrl(wxWindow *parent, wxWindowID id,
                const wxString& value = wxEmptyString,

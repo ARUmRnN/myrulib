@@ -396,6 +396,14 @@ FbSearchCtrl::FbSearchCtrl()
     Init();
 }
 
+GtkEditable *FbSearchCtrl::GetEditable() const {
+    return nullptr;
+}
+
+GtkEntry *FbSearchCtrl::GetEntry() const {
+    return nullptr;
+}
+
 FbSearchCtrl::FbSearchCtrl(wxWindow *parent, wxWindowID id,
            const wxString& value,
            const wxPoint& pos,

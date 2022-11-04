@@ -364,6 +364,15 @@ void WxAuiDefaultTabArt::SetSizingInfo(const wxSize& tab_ctrl_size,
     m_tabCtrlHeight = tab_ctrl_size.y;
 }
 
+void WxAuiDefaultTabArt::DrawBorder(wxDC& dc, wxWindow* wnd, const wxRect& rect) {}
+
+int WxAuiDefaultTabArt::GetBorderWidth(wxWindow* wnd) {
+    return 1;
+}
+
+int WxAuiDefaultTabArt::GetAdditionalBorderSpace(wxWindow* wnd) {
+    return 0;
+}
 
 void WxAuiDefaultTabArt::DrawBackground(wxDC& dc,
                                         wxWindow* WXUNUSED(wnd),
@@ -1029,6 +1038,16 @@ void WxAuiSimpleTabArt::SetActiveColour(const wxColour& colour)
 {
     m_selectedBkBrush = wxBrush(colour);
     m_selectedBkPen = wxPen(colour);
+}
+
+void WxAuiSimpleTabArt::DrawBorder(wxDC& dc, wxWindow* wnd, const wxRect& rect) {}
+
+int WxAuiSimpleTabArt::GetBorderWidth(wxWindow* wnd) {
+    return 1;
+}
+
+int WxAuiSimpleTabArt::GetAdditionalBorderSpace(wxWindow* wnd) {
+    return 0;
 }
 
 void WxAuiSimpleTabArt::DrawBackground(wxDC& dc,

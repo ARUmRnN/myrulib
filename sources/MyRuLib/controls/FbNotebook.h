@@ -32,6 +32,11 @@ public:
     void SetColour(const wxColour& colour);
     void SetActiveColour(const wxColour& colour);
 
+    void DrawBorder(
+                 wxDC& dc,
+                 wxWindow* wnd,
+                 const wxRect& rect);
+
     void DrawBackground(
                  wxDC& dc,
                  wxWindow* wnd,
@@ -56,6 +61,10 @@ public:
                  wxRect* outRect);
 
     int GetIndentSize();
+
+    int GetBorderWidth(wxWindow* wnd);
+
+    int GetAdditionalBorderSpace(wxWindow* wnd);
 
     virtual int ShowDropDown(
                          wxWindow* wnd,
@@ -119,6 +128,11 @@ public:
     void SetColour(const wxColour& colour);
     void SetActiveColour(const wxColour& colour);
 
+    void DrawBorder(
+                 wxDC& dc,
+                 wxWindow* wnd,
+                 const wxRect& rect);
+
     void DrawBackground(
                  wxDC& dc,
                  wxWindow* wnd,
@@ -143,6 +157,10 @@ public:
                  wxRect* outRect);
 
     int GetIndentSize();
+
+    int GetBorderWidth(wxWindow* wnd);
+
+    int GetAdditionalBorderSpace(wxWindow* wnd);
 
     wxSize GetTabSize(
                  wxDC& dc,
